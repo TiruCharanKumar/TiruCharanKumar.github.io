@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiru Charan Kumar Chakka | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-brand">
+            <!-- Mini profile picture (hidden initially) -->
+            <img src="photos/profilepicture.png" alt="Tiru" id="nav-profile-pic">
+            <h1>Tiru Charan Kumar Chakka</h1>
+        </div>
+        <ul>
+            <li><a href="#about" class="nav-pill">About & Skills</a></li>
+            <li><a href="#training" class="nav-pill">Training</a></li>
+            <li><a href="#projects" class="nav-pill">Projects</a></li>
+            <li><a href="#achievements" class="nav-pill">Certificates</a></li>
+            <li><a href="#education" class="nav-pill">Education</a></li>
+            <li><a href="#resume" class="nav-pill">Resume</a></li>
+            <li><a href="#contact" class="nav-pill">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT & SKILLS -->
+    <section id="about">
+        <!-- Main Circular Profile Pic -->
+        <div class="profile-container">
+            <img src="photos/profilepicture.png" alt="Tiru Charan Kumar Chakka" id="main-profile-pic">
+        </div>
+        
+        <h2>About & Skills</h2>
+        <p>I am a B.Tech Computer Science and Engineering student at Lovely Professional University.</p>
+        
+        <h3>Technical Skills</h3>
+        <ul>
+            <li><strong>Languages:</strong> C, Python</li>
+            <li><strong>Databases:</strong> MySQL</li>
+            <li><strong>Tools/Platforms:</strong> Git, GitHub, VS Code</li>
+            <li><strong>Soft Skills:</strong> Problem-Solving Skills, Project Management, Adaptability</li>
+        </ul>
+    </section>
+
+    <!-- TRAINING -->
+    <section id="training">
+        <h2>Training</h2>
+        <div class="card">
+            <h3>Artificial Intelligence Trainee (Confirmed)</h3>
+            <p><strong>Gladify Edutech Pvt. Ltd. (Online) | April 2026 - June 2026[cite: 1]</strong></p>
+            <p>Selected for a structured AI traineeship focused on practical, industry-oriented learning in association with Lovely Professional University[cite: 1]. Receiving hands-on training in Artificial Intelligence concepts, tools, and real-world applications[cite: 1].</p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>Python Based Quiz Management System</h3>
+            <p><strong>Duration: 3 weeks</strong></p>
+            <p>Developed a desktop-based Quiz Management System using Python, Tkinter, JSON, and OpenPyXL[cite: 1]. The application provides secure authentication for Admin, Co-Admin, and Students, supports timed MCQ quizzes with automatic scoring, stores student records in JSON databases, and generates an Excel-based rank list for performance analysis[cite: 1].</p>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CERTIFICATES -->
+    <section id="achievements">
+        <h2>Achievements & Certificates</h2>
+        <ul>
+            <li style="margin-bottom: 20px;">
+                <strong>Line Following Robot (LFR) Challenge:</strong> Competed at IIT ROPAR (February 2026), demonstrating autonomous robot design, sensor integration, and embedded programming[cite: 1].<br>
+                <!-- Replace 'lfr-cert.jpg' with your actual image file name -->
+                <img src="photos/LFR.jpg" alt="LFR Certificate" width="400" style="margin-top: 10px; border: 1px solid #ccc;">
+            </li>
+            <li style="margin-bottom: 20px;">
+                <strong>CAD Design Competition:</strong> Participated in a technical CAD event at IIT ROPAR (February 2026), showcasing 3D modeling and mechanical design skills using computer-aided design principles[cite: 1].<br>
+                <!-- Replace 'cad-cert.jpg' with your actual image file name -->
+                <img src="photos/CAD.png" alt="CAD Certificate" width="400" style="margin-top: 10px; border: 1px solid #ccc;">
+            </li>
+            <li style="margin-bottom: 20px;">
+                <strong>MOOC Certification:</strong> Successfully completed a 6-hour certified MOOC and passed a proctored examination, demonstrating commitment to continuous learning, self-improvement, and professional development[cite: 1].<br>
+                <!-- Replace 'mooc-cert.jpg' with your actual image file name -->
+                <img src="photos/CERT.png" alt="MOOC Certificate" width="400" style="margin-top: 10px; border: 1px solid #ccc;">
+            </li>
+        </ul>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="card">
+            <h3>Lovely Professional University, Punjab, India</h3>
+            <p>Bachelor of Technology - Computer Science and Engineering | CGPA: 8.4 | Since August 2025</p>
+        </div>
+        <div class="card">
+            <h3>Resonance Jr College, Gunadala, Vijayawada</h3>
+            <p>Intermediate | Percentage: 95.3% | April 2023 - March 2025</p>
+        </div>
+        <div class="card">
+            <h3>Alpha High School, Cumbum</h3>
+            <p>Matriculation | Percentage: 98.3% | April 2022 - April 2023</p>
+        </div>
+    </section>
+    <!-- RESUME -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Review my full qualifications below:</p>
+        
+        <!-- 60% Height Scrollable Container -->
+        <div class="resume-wrapper" id="resume-container">
+            <img src="photos/resume-preview.jpg" alt="Tiru Charan Resume preview">
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="resume.pdf" download="Tiru_Charan_Resume.pdf" class="btn">Download Resume PDF</a>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Send me a message below, or reach out directly.</p>
+
+        <!-- CONTACT FORM -->
+        <form action="https://formspree.io/f/mppzqwaa" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="mobile" placeholder="Your Mobile Number" required>
+            <textarea name="message" rows="5" placeholder="Your Message / Description" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- CONTACT DETAILS -->
+        <div class="contact-details">
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:tirucharankumar@gmail.com">tirucharankumar@gmail.com</a></li>
+                <li><strong>Mobile:</strong> +91-8074122454</li>
+                <li><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/tirucharankumar8074" target="_blank">linkedin.com/in/tirucharankumar8074</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/TiruCharanKumar" target="_blank">github.com/TiruCharanKumar</a></li>
+            </ul>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+/* BASE STYLES & RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    background-attachment: fixed;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* UPGRADED NAVIGATION BAR */
+nav {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    transition: padding 0.4s ease, background 0.4s ease;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+/* DYNAMIC NAV PROFILE PIC */
+#nav-profile-pic {
+    width: 0px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    transition: width 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
+}
+
+nav.scrolled #nav-profile-pic {
+    width: 40px;
+    opacity: 1;
+    margin-right: 15px;
+}
+
+/* NAVIGATION PILLS */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-pill {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px 22px !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.5px;
+    color: #e2e8f0 !important;
+    border-radius: 50px !important; /* Tablet shape */
+    text-decoration: none;
+    transition: all 0.3s ease !important;
+    display: inline-block;
+}
+
+.nav-pill:hover {
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
+    transform: translateY(-2px);
+    border-color: transparent;
+    text-decoration: none; /* This line prevents the underline */
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+h3 {
+    color: #38bdf8;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* MAIN PROFILE PICTURE (Circular) */
+.profile-container {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+#main-profile-pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; /* Forces the perfect circle */
+    object-fit: cover;
+    border: 4px solid #00f2fe;
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.3);
+}
+
+/* CARDS & LISTS */
+.card, section > ul {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover, section > ul:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 242, 254, 0.3);
+}
+
+section > ul {
+    list-style: none;
+}
+
+section > ul > li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+section > ul > li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #00f2fe;
+}
+
+/* GENERAL LINKS */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* BUTTONS (Tablet/Pill Shape) */
+.btn {
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+    color: white !important;
+    padding: 12px 30px;
+    border-radius: 50px; /* Tablet shape */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+    text-decoration: none;
+}
+
+/* GENERAL IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* SEAMLESS RESUME WRAPPER */
+.resume-wrapper {
+    margin-top: 30px;
+    background: #ffffff; /* Forces clean white background */
+    border-radius: 12px;
+    padding: 0; /* Removes all dark borders */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    overflow: hidden; /* Ensures the image respects the rounded corners */
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.resume-wrapper img {
+    border-radius: 0; /* Prevents double border-radius inside the wrapper */
+    display: block;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 950px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
+/* DEDICATED RESUME NAVIGATION */
+.resume-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.resume-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: rgba(0, 242, 254, 0.2);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 242, 254, 0.2);
+}
+
+/* SCROLLABLE RESUME WRAPPER (60% Viewport Height) */
+.resume-wrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    overflow-y: auto; /* Enables scrolling */
+    height: 60vh; /* Forces container to only show 60% of the screen height */
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.resume-wrapper img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+}
+
+/* CUSTOM NEON SCROLLBAR FOR RESUME */
+.resume-wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+.resume-wrapper::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 0 12px 12px 0;
+}
+.resume-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00f2fe, #4facfe);
+    border-radius: 10px;
+}
+/* CONTACT FORM & DETAILS */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto 40px auto; 
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00f2fe;
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.2);
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.contact-form button {
+    align-self: center; 
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 0; /* Resets the left margin applied to other buttons */
+}
+
+.contact-details {
+    text-align: center;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.contact-details ul li {
+    margin-bottom: 12px;
+    padding-left: 0;
+}
+
+.contact-details ul li::before {
+    display: none; /* Removes the custom neon bullet point for these links */
+}
